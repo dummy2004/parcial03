@@ -29,7 +29,6 @@ Node<int>* Ejercicio01::mergeLists(Node<Node<int>*>* lists) {
             pq.push(top->next);
         }
     }
-
     return dummy->next;
 }
 
