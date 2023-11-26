@@ -1,24 +1,24 @@
 #pragma once
 
+#include <map>
 #include <string>
-#include <unordered_map>
-#include <vector>
+#include <utility>
 
+using std::map;
 using std::string;
-using std::pair;
-using std::vector;
+using std::make_pair;
 
 class TimeMap
 {
 public:
-    TimeMap();
+	TimeMap();
 
-    void set(string key, string value, int timestamp);
+	void set(string key, string value, int timestamp);
 
-    string get(string key, int timestamp);
+	string get(string key, int timestamp);
 
 private:
-    std::unordered_map<string, vector<pair<int, string>>> data;
+	map<string, map<int, string>> timeMap;
 };
 
 
